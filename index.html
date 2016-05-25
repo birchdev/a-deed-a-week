@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
   <script src="js/jQuery.js"></script>
@@ -14,37 +13,42 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/angular.min.js"></script>
   <script src="js/app.js" type="text/javascript"></script>
-  <script src="js/products.js" type="text/javascript"></script>
 	<title>Angular App</title>
 </head>
 
+  <body ng-controller="StoreController as store">
 
-  <body ng-controller="StoreController as store" class="container-fluid bg-grey-md">
+  <div class="jumbotron container-fluid">
+    <h1 class="text-xs-center">Deed a Week</h1>
+  </div>
 
-    <header class="row bg-deep-orange-900">
-      <div class="buttons">
-        <a href="http://kfmahre.github.io/" class="icon home">home</a>
+
+  <div class="container-fluid">
+      <h2>Featured Deeds:</h2>
+    <div class="row">
+      <img class="image-3rd" src="http://placehold.it/350x150">
+      <img class="image-3rd" src="http://placehold.it/350x150">
+      <img class="image-3rd" src="http://placehold.it/350x150">
+    </div>
+  </div>
+
+  <h2 class="text-xs-center">Deeds:</h2>
+  <!--  Feed Container  -->
+  <div class="container">
+    <div class="card-columns" >
+      <div class="card extra-marg" ng-repeat="item in feed">
+        <img class="card-img-top img-fluid" src="http://placehold.it/350x150">
+        <div class="card-block">
+        <h4 class="card-title">{{item.name}}</h4>
+        <blockquote class="card-blockquote">By: {{item.user}}
+          <p class="card-text">
+            {{item.desc}}
+          </p>
+        </blockquote>
+        </div>
       </div>
-    </header>
-
-    <div class="container">
-      <h2 class="text-xs-center">Products:</h2>
     </div>
-    <!--  Products Container  -->
-    <div class=" container">
-
-      <div class="row" ng-repeat="item in feed">
-				<div class="col-8-md" style="border:1px solid #000">
-					<h1>{{item.name}}</h1>
-					<h4>By: {{item.user}}</h4>
-					<p>
-						{{item.desc}}
-					</p>
-
-				</div>
-			</div>
-
-    </div>
+  </div>
 
   </body>
 

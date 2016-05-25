@@ -1,6 +1,6 @@
 (function() {
 
-  var app = angular.module('store', ['store-products']);
+  var app = angular.module('store', []);
 
   app.controller('StoreController', function($scope){
     $scope.feed = feed;
@@ -27,6 +27,7 @@
       this.review = {};
     };
   });
+
   var feed = [
     {
       name: "Mowed a lawn.",

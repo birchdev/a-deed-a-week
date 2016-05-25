@@ -1,4 +1,19 @@
-/*
+/* Hello -----------------------------------------------------------------------
+
+   I used angular and bootstrap to build the original website we have as the
+   frame here. I'm sure changes will have to be made as we go along but I
+   thought I should at least add comments explaining what I did
+
+   Designers and Developers alike should check out:
+
+   http://v4-alpha.getbootstrap.com/getting-started/introduction/
+
+------------------------------------------------------------------------------*/
+
+
+/* --------------------------------------------------------------------------- -
+      This is old code deprecated by boostrap 4, but I dont want to delete it in
+      the case that we need to revert to an old version of bootstrap
 *,
 *::before,
 *::after {
@@ -10,58 +25,45 @@ html {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-*/
+- --------------------------------------------------------------------------- */
 
 body {
   width: 100%;
-  font-family: 'Lato', sans-serif;
 }
 
-hr {
-  height: 0px;
-  color: #424242;
-  border: solid 5px rgba(0,0,0,0.2);
-  box-shadow: 2px 4px 4px #212121;
-}
-
-header {
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-  margin: 0 0 10px 0;
-  border-bottom: solid 5px rgba(0,0,0,0.2);
-  opacity: 0.95;
+.image-3rd {
+  min-width: 33%;
+  max-width: 33%;
 }
 
 a {
-  color: #FFAB00;
-  text-shadow: 1px 1px 2px #212121;
   text-decoration: none;
 }
 
 a:visited {
-  color: #FFAB00;
-  text-shadow: 1px 1px 2px #212121;
   text-decoration: none;
 }
 
 a:hover {
   transition: all linear 0.5s;
-  color: #000000;
-  text-shadow: 1px 1px 2px #FFAB00;
 }
 
 a:active {
-  color: #000000;
   text-decoration: none;
 }
 
 a:current {
-  color: #ffffff;
   text-decoration: none;
 }
 
-h1, h2, h3, h4 { font-weight: 700; text-shadow: 3px 3px 6px #212121; opacity: 0.85;}
+h1, h2, h3, h4 {
+  /* dark red color */
+  color: #C62828;
+  font-weight: 700;
+  text-shadow: 3px 3px 6px #e0e0e0;
+  opacity: 0.85;
+}
+
 h1 { font-size: 3em;  }
 h2 { font-size: 2.7em; }
 h3 { font-size: 2.3em; }
@@ -71,55 +73,90 @@ p, em, blockquote {
   text-shadow: 1px 1px 2px #212121;
 }
 
-.jumbotron {
-  padding-top: 70px;
-  border: solid 5px rgba(0,0,0,0.2);
-  box-shadow: 2px 4px 4px #212121;
-  opacity: 0.95;
+ul {
+  list-style: none;
+  margin, padding: 0;
+  border-collapse: collapse;
+  -webkit-padding-start: 0;
 }
 
-.extra-marg {
-  margin: 50px;
+/*  Styling for angular --- please leave these alone designers -------------  */
+
+.ng-invalid.ng-dirty {
+  border-color: #fa787e;
 }
 
-.bg-grey-rl {
-  background-color: #e0e0e0;
-  color: #000000;
+.ng-valid.ng-dirty {
+  border-color: #78fa89;
 }
 
-.bg-grey-xl {
-  background-color: #f5f5f5;
-  color: #000000;
+.fade {
+  opacity: 1;
 }
 
-.bg-grey-ul {
-  background-color: #fafafa;
-  color: #000000;
+.fade.ng-hide-add, .fade.ng-hide-remove {
+  transition: all linear 0.5s;
 }
 
-.bg-white {
-  background-color: #ffffff;
-  color: #000000;
+.fade.ng-hide {
+  opacity: 0;
 }
 
+/*  End of angular styles --------------------------------------------------  */
+
+/*  Material Design Colors from Google, more @ :                              --
+--  https://www.google.com/design/spec/style/color.html#color-color-palette   --
+--  The point of these is to make styling an item and it's text easy by       --
+--  simply assigning it a class.                                              --
+--                                                                            --
+------------------------------------------------------------------------------*/
+
+/* background black */
 .bg-black {
   background-color: #000000;
   color: #ffffff;
 }
 
+/* background grey - dark */
 .bg-grey-dk {
   background-color: #212121;
   color: #ffffff;
 }
 
+/* background grey - medium */
 .bg-grey-md {
   background-color: #303030;
   color: #ffffff;
 }
 
+/* background grey - light */
 .bg-grey-lt {
   background-color: #424242;
   color: #ffffff;
+}
+
+/* background grey - really light */
+.bg-grey-rl {
+  background-color: #e0e0e0;
+  color: #000000;
+}
+
+/* background grey - extra light */
+.bg-grey-xl {
+  background-color: #f5f5f5;
+  color: #000000;
+}
+
+/* background grey - ultra light */
+.bg-grey-ul {
+  background-color: #fafafa;
+  color: #000000;
+}
+
+/* background white */
+.bg-white {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .bg-blue-grey-lt {
@@ -142,6 +179,7 @@ p, em, blockquote {
   color: #ffffff;
 }
 
+/* inv - for inverse color */
 .bg-blue-grey-inv {
   background-color: #ECEFF1;
   color: #000000;
@@ -166,6 +204,10 @@ p, em, blockquote {
   background-color: #BF360C;
   color: #ffffff;
 }
+
+/*  "A" signifies an accent color: designers take note... I know we're not    --
+--  going by Google material design standards, but just to understand         --
+--  why I made these classes                                                  */
 
 .bg-deep-orange-A700 {
   background-color: #DD2C00;
@@ -197,178 +239,4 @@ p, em, blockquote {
   color: #000000;
 }
 
-.main-image {
-  max-width: 100%;
-}
-
-.small-image {
-  max-width: calc(100%/3);
-}
-
-.panel-controller {
-
-}
-
-.panel-controller a {
-  margin: 2px;
-  padding: 1px;
-  max-width: 33%;
-  display: inline-table;
-  color: #ffffff;
-  border: 3px solid rgba(0,0,0,0.2);
-}
-
-.panel-controller a:link:visited {
-  color: #ffffff;
-  text-decoration: none;
-  border: 3px solid rgba(0,0,0,0.2);
-}
-
-.panel-controller a:hover {
-  text-decoration: none;
-  transition: all linear 0.5s;
-  color: #000000;
-  opacity: 0.8;
-  filter: alpha(opacity=80);
-  border: 3px solid rgba(0,0,0,0.2);
-}
-
-.panel-controller a:active:current {
-  text-decoration: none;
-  color: #ffffff;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  border: 3px solid rgba(0,0,0,0.2);
-}
-
-.card {
-  z-index: 0;
-  border-radius: 0;
-  border: solid 5px rgba(0,0,0,0.2);
-}
-
-.card-footer {
-  border-radius: 0;
-  border: solid 5px rgba(0,0,0,0.2);
-  margin-bottom: 5px;
-}
-
-.card:hover {
-  background-color: #E64A19;
-  box-shadow: 2px 2px 6px #FFAB00;
-  transition: all linear 0.1s;
-  transform: translate3d(-2px,-2px,3px);
-}
-
-ul {
-  list-style: none;
-  margin, padding: 0;
-  border-collapse: collapse;
-  -webkit-padding-start: 0;
-}
-
-button {
-  border: 1px solid rgba(0,0,0,0.2);
-}
-
-input {
-  border: 1px solid rgba(0,0,0,0.2);
-}
-
-button:hover {
-  opacity: 0.8;
-  transition: all linear 0.5s;
-  filter: alpha(opacity=80);
-  border: 1px solid rgba(0,0,0,0.2);
-}
-
-input:hover {
-  opacity: 0.8;
-  transition: all linear 0.5s;
-  filter: alpha(opacity=80);
-  border: 1px solid rgba(0,0,0,0.2);
-}
-
-button:active {
-  opacity: 0;
-  filter: alpha(opacity=0);
-  border: 1px solid rgba(0,0,0,0.2);
-}
-
-input:active {
-  opacity: 0;
-  filter: alpha(opacity=0);
-  border: 1px solid rgba(0,0,0,0.2);
-}
-
-.img-main {
-  box-shadow: 2px 2px 4px #B71C1C;
-  transform: translate3d(-2px,-2px,-2px);
-}
-
-.img-btm {
-  border: 1px solid transparent;
-  box-shadow: 1px 1px 2px #B71C1C;
-  transform: translate3d(-1px,-1px,-2px);
-}
-
-.ng-invalid.ng-dirty {
-  border-color: #fa787e;
-}
-
-.ng-valid.ng-dirty {
-  border-color: #78fa89;
-}
-
-.fade {
-  opacity: 1;
-}
-
-.fade.ng-hide-add, .fade.ng-hide-remove {
-  transition: all linear 0.5s;
-}
-
-.fade.ng-hide {
-  opacity: 0;
-}
-
-/*=============
-=  Icon links =
-=============*/
-
-.buttons {
-    float: left;
-    margin: 0;
-    margin-left: calc((100% - 50px) / 2);
-}
-
-.icon {
-  display: inline-block;
-  vertical-align: top;
-  overflow: hidden;
-  margin: 0;
-  width: 50px;
-  height: 50px;
-  font-size: 0;
-  text-indent: -9999px;
-  background-color: #595959;
-  z-index: 0;
-  -webkit-transition: background 0.2s;
-  transition: background linear 0.2s;
-}
-
-.home {
-  background: url("home2.png");
-  background-image: url("home2.png");
-  background-size: 100%;
-  background-position: 0 0;
-}
-
-.home:hover {
-  background-position: 0 -50px;
-  transition: background linear 0.2s;
-}
-
-/*====================
-= end of icon styles =
-====================*/
+/*  --- End of Color codes -------------------------------------------------  */
